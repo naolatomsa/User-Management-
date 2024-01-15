@@ -1,0 +1,13 @@
+.user-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #38AC92;
+  }
+  .ums{
+    padding:0 260px;
+    color: white;
+  }
+  .logout{
+    padding: 0 180px;
+  }

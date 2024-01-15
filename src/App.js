@@ -1,7 +1,9 @@
 import React from 'react';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Login from "./login";
-import Naol from './button.js';
+import View from './Activity';
+import Gule from './userpage';
+import Naol from './adminDashbord';
 
 // import './App.css';
 
@@ -15,6 +17,15 @@ const router = createBrowserRouter([
     path: "/Admin Dashbord",
     element: <Naol />,
   },
+  {
+    path: "/userhome",
+    element: <Gule />,
+  },
+  {
+    path: "/viewactivity",
+    element: <View />,
+  }
+  
 ]);
 function App() {
   return (
