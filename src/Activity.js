@@ -1,6 +1,4 @@
 import React from 'react';
-import TopBar from './Topbar';
-import Gule from './userpage';
 // import './adminDashbord.css';
 import './Activity.css'
 
@@ -8,7 +6,6 @@ function View() {
 
   return (
     <div style={{display: 'grid'}}>
-    <TopBar />
     <div className="container2">
     <ul className="responsivetable">
         <li className="tableheader">

@@ -4,6 +4,9 @@ import Login from "./login";
 import View from './Activity';
 import Gule from './userpage';
 import Naol from './adminDashbord';
+import SetAcount from './setacount';
+import AdminProfile from './adminProfile';
+import Edit from './edituser';
 
 // import './App.css';
 
@@ -24,6 +27,18 @@ const router = createBrowserRouter([
   {
     path: "/viewactivity",
     element: <View />,
+  },
+  {
+    path: "/setaccount",
+    element: <SetAcount />,
+  },
+  {
+    path: "/edituser",
+    element: <Edit />,
+  },
+  {
+    path: "/adminpro",
+    element: <AdminProfile />,
   }
   
 ]);

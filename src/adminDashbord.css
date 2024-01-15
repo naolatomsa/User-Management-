@@ -16,17 +16,16 @@ body {
   .container {
     max-width: 1000px;
     padding-left: 120px;
-    padding-right: 80px;
+    /* padding-right: 80px; */
     margin-left: 100px;
-    margin-right: 100px;
+    /* margin-right: 100px; */
   }
 
   .user-role{
     display: flex;
     justify-content: space-between;
     background-color: white;
-    color: black;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     margin-left: 260px;
     margin-right: 180px;
     padding: 10px 30px;
@@ -35,8 +34,7 @@ body {
   .user-man{
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
-    color: black;
+    /* max-width: 1000px; */
     padding-left: 160px;
     padding-right: 80px;
     margin-left: 100px;
@@ -46,9 +44,9 @@ body {
     display: flex;
     justify-content: space-between;
     max-width: 1000px;
-    padding-left: 160px;
-    padding-right: 80px;
-    margin-left: 100px;
+    padding-left: 60px;
+    padding-right: 50px;
+    margin-left: 200px;
     margin-right: 100px;
   }
   
@@ -66,7 +64,7 @@ body {
     border: #38A899;
     border-radius: 20px;
     width: 150px;
-    height: 10;
+    height: 50px;
   }
   .responsive-table {
     li {

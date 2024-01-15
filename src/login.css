@@ -2,7 +2,15 @@
 * {
     box-sizing: border-box;
   }
-  
+  .formcontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    padding-bottom: 20px;
+  }
   body {
     margin: 0;
     padding: 0;
@@ -87,10 +95,18 @@
     font-size: 12px;
     font-weight: bold;
     font-family: sans-serif;
-    padding: 12px 45px;
+    padding: 20px 20px;
     text-transform: uppercase;
   }
-  
+  .input5{
+    display: flex;
+    padding-left: 15px;
+    width: 350px;
+    gap: 20px;
+  }
+  .input6{
+    padding-left: 200px;
+  }
   button:active {
     transform: scale(0.95);
   }

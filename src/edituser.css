@@ -1,0 +1,33 @@
+.editform{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 40px;
+    align-content: center;
+   
+    border-radius: 20px;
+
+}
+.edit{
+    height: 300px;
+    
+}
+.htwo{
+    grid-column: span 2;
+}
+.edituser{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px
+}
+.tolbar1{
+    grid-column: span 3;
+}
+.inputfour{
+    grid-column: span 2;
+}
+
+/* Edit admin profile */
+.edittwo{
+    height: 500px;
+    
+}

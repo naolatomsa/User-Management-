@@ -1,10 +1,10 @@
 import React from 'react';
 import './userpage.css';
-import TopBar from './Topbar';
+// import TopBar from './Topbar';
 function Gule(){
     return(
         <>
-        <TopBar />
+        {/* <TopBar /> */}
   <div className="card">
   
     <div className="card1">

@@ -16,7 +16,9 @@ function Naol() {
       <input type="text" placeholder="search" />
     </div>
     <div className="user-role">
-      <p>ums</p>
+      <p style={{
+      color: 'black'
+    }}> ums</p>
       <button>search</button>
     </div>
     <div className="user-top">
