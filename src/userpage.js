@@ -1,5 +1,6 @@
 import React from 'react';
 import './userpage.css';
+import IMG from './img';
 // import TopBar from './Topbar';
 function Gule(){
     return(
@@ -8,11 +9,13 @@ function Gule(){
   <div className="card">
   
     <div className="card1">
-      <img
+      {/* <img
         src="https://res.cloudinary.com/alexandracaulea/image/upload/v1582179610/user_fckc9f.jpg"
         alt="User image"
         className="card__image"
-      />
+      /> */}
+      <IMG imgName={"https://res.cloudinary.com/alexandracaulea/image/upload/v1582179610/user_fckc9f.jpg"} 
+      size={'100px'}/>
       <div className="card__text">
         <h2>Alexandra Caulea</h2>
         <p style={{color: 'black'}}>United State Of America</p>

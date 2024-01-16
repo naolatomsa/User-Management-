@@ -9,5 +9,9 @@
     color: white;
   }
   .logout{
-    padding: 0 180px;
+    padding: 0 100px;
+    padding-left: 0;
+  }
+  .topbarname{
+    padding-left: 400px;
   }

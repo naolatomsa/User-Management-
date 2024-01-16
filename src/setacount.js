@@ -38,13 +38,13 @@ function SetAcount() {
           </div>
    
             <div className='input4'>
-              <input type='password' placeholder='Date of birth' required/>
+              <input type='date' placeholder='Date of birth' required/>
             </div>
             <div className='input4'>
-              <input type='password' placeholder='location' required/>
+              <input type='' placeholder='location' required/>
             </div>
             <div className='input4'>
-              <input type='password' placeholder='upload picture' required/>
+              <input type='file' placeholder='upload picture' required/>
             </div>
             <div className='input5'>
               <button>Clear</button>

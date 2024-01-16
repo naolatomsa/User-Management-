@@ -33,6 +33,6 @@ img {
     padding-left: 100px;
   }
   .card__image {
-    width: 100px;
+    /* width: 100px; */
     border-radius: 50%;
   }
