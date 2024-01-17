@@ -118,7 +118,9 @@
  .input-container{
   padding-left: 17px;
  }
-
+.input-containeradduser{
+  padding-left: 0;
+}
   button:active {
     transform: scale(0.95);
   }

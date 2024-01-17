@@ -2,7 +2,16 @@ import React from 'react';
 import './userpage.css';
 import IMG from './img';
 // import TopBar from './Topbar';
-function Gule(){
+function Gule(props){
+  let name = props.name;
+  let location = props.location;
+  let role = props.role;
+  let status = props.status;
+  let gender = props.gender;
+  let email = props.email;
+  let phone = props.phone;
+  let size = props.size;
+
     return(
         <>
         {/* <TopBar /> */}
@@ -17,31 +26,28 @@ function Gule(){
       <IMG imgName={"https://res.cloudinary.com/alexandracaulea/image/upload/v1582179610/user_fckc9f.jpg"} 
       size={'100px'}/>
       <div className="card__text">
-        <h2>Alexandra Caulea</h2>
-        <p style={{color: 'black'}}>United State Of America</p>
-        <p style={{color: 'black'}}>Whashington Dc</p>
+        <h2>{name}</h2>
+        <p style={{color: 'black'}}>{location}</p>
+        {/* <p style={{color: 'black'}}>Whashington Dc</p> */}
       </div>
     </div>
     <ul className="card2">
       <li>
-        <span>posts</span>
+        <span>{role}</span>
       </li>
       <li>
-        <span>followers</span>
+        <span>{status}</span>
       </li>
       <li>
-        <span>following</span>
+        <span>{gender}</span>
       </li>
     </ul>
     <ul className="card3">
       <li>
-        <span>posts</span>
+        <span>{email}</span>
       </li>
       <li>
-        <span>followers</span>
-      </li>
-      <li>
-        <span>following</span>
+        <span>{phone}</span>
       </li>
     </ul>
   </div>

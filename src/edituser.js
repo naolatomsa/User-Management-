@@ -9,7 +9,13 @@ function Edit(){
         <div class="edituser">
         
         <div className='tolbar1'><TopBar /></div>
-        <Gule />
+
+        <Gule location='ethiopia'
+            role = 'admin'
+            status = 'active'
+            gender = 'male'
+            email = 'naol@gmail.com'
+            phone = '+2519'/>
         <div className='form-container edit'>
         <form className='form editform' action='#'>
         <h1 className='htwo'>Edit User Account</h1>

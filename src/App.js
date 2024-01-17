@@ -7,6 +7,10 @@ import Naol from './adminDashbord';
 import SetAcount from './setacount';
 import AdminProfile from './adminProfile';
 import Edit from './edituser';
+import AdminAdduser from './AdminAdduser';
+import UserDashboard from './userDashboard';
+import UserUpdateProfile from './userUpdateProfile';
+import ProfileOfAdmin from './profileOfAdmin';
 
 // import './App.css';
 
@@ -37,9 +41,27 @@ const router = createBrowserRouter([
     element: <Edit />,
   },
   {
-    path: "/adminpro",
+    path: "/adminpage",
     element: <AdminProfile />,
-  }
+  },
+  {
+    path: "/adduser",
+    element: <AdminAdduser />,
+  },
+  {
+    path: "/userpro",
+    element: <UserDashboard />,
+  },
+  {
+    path: "/updatepro",
+    element: <UserUpdateProfile />,
+  },
+  
+  {
+    path: "/adminpro",
+    element: <ProfileOfAdmin />,
+  },
+  
   
 ]);
 function App() {

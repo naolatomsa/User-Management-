@@ -1,0 +1,8 @@
+.adminpro{
+    display: flex;
+    gap: 30px;
+}
+.adminprofile{
+    margin-top: 20px;
+    height: 500px;
+}
