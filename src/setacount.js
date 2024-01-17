@@ -99,7 +99,7 @@ function SetAcount() {
             </div>
     
           <div className='input1' style={{width:'300px', border: 'solid 1px #38A899 '}} >
-          <label for="gender">Gender:<br></br></label>
+          <label htmlFor="gender">Gender:<br></br></label>
         <select id="gender" name="gender" value={gender} onChange={(e)=>{setGender(e.target.value)}}>
             <option value="male" >Male</option>
             <option value="female">Female</option>
@@ -114,19 +114,19 @@ function SetAcount() {
               <input type='date' placeholder='Date of birth' required value={date} onChange={(e)=>{setDate(e.target.value)}}/>
             </div>
             <div className='input-container'>
-              <div className='input4'>
+              <div className='inputcountry'>
                 <input
                   type='text'
                   placeholder='Location'
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                 />
-                <span className='icon' onClick={handleIconClick}>
+                <span className='icon' style={{cursor: 'pointer'}}onClick={handleIconClick}>
                   &#x25BC;
                 </span>
               </div>
               {showCountriesList && (
-                <select
+                <select  style={{width: '50px'}}
                   className='countries-list'
                   onChange={(e) =>
                     handleCountryChange(

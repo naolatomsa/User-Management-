@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 import './login.css';
 
@@ -37,24 +38,56 @@ function Login() {
     }
 
   };
-  const handleSignup = () => {
-    if(Username && Password &&Email && ConfirmPassword){
-      if(Password===ConfirmPassword)
-      {
-        navigate('/setaccount')
 
+  
+    const handleSignup = async (e) => {
+      e.preventDefault();
+  
+      // Input field validation
+      if (!Username.trim() || !Password.trim() || !Email.trim() || !ConfirmPassword.trim()) {
+        console.error('All fields are required.');
+        return;
       }
-      else{
-        alert('your Password doest much')
+      if (Password !== ConfirmPassword) {
+        console.error('Passwords do not match.');
+        return;
       }
+
+  
+      try {
+        const response = await axios.post('http://192.168.0.111:8000/api/signup/', {
+          Username,Email, Password, ConfirmPassword
+        });
+  
+        console.log('Form data sent successfully!', response.data);
+  
+        // Navigate to another page after successful submission
+        navigate('/setaccount')
+      } catch (error) {
+        console.error('Failed to send form data', error);
+      }
+
+    };
+
+  // const handleSignup = () => {
+    
+  //   if(Username && Password &&Email && ConfirmPassword){
+  //     if(Password===ConfirmPassword)
+  //     {
+  //       navigate('/setaccount')
+
+  //     }
+  //     else{
+  //       alert('your Password doest much')
+  //     }
       
 
-    }
-    else{
-      navigate('')
-    }
+  //   }
+  //   else{
+  //     navigate('')
+  //   }
     
-  };
+  // };
   return (
     <div className='all'>
       <div className='wow'>
@@ -74,7 +107,7 @@ function Login() {
         </div>
       </div>
       <div className='form-container'>
-        <form className='form' action='#'>
+        <form className='form' onSubmit={isSignUp ? handleSignup : handleLogin}>
           <h1 className='h2'>{action}</h1>
           {isSignUp && (
             <div className='input3'>
@@ -95,7 +128,7 @@ function Login() {
           )}
           
           {isSignUp ? (<button onClick={handleSignup}>{action}</button>):
-           (<button onClick={handleLogin}>{action}</button>)}
+           (<button type='submit' onClick={handleLogin}>{action}</button>)}
           <a href='#'>{isSignUp ? '' : 'Forgot your password?'}</a>
           {/* <a onClick={switchForm}> {isSignUp ? 'Login' : 'Sign Up'}</a> */}
           <p style={{ color: 'black' }}>
