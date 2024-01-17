@@ -9,6 +9,8 @@ function Edit(){
         <div class="edituser">
         
         <div className='tolbar1'><TopBar /></div>
+        <img src='file:///C:/Users/HP/Desktop/web/back.png' width={100} height={100}/>
+
 
         <Gule location='ethiopia'
             role = 'admin'

@@ -23,6 +23,7 @@ body {
 
   .user-role{
     display: flex;
+    height: 65px;
     justify-content: space-between;
     background-color: white;
     /* max-width: 1000px; */

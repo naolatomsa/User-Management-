@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
+import IMG from './img';
 import './login.css';
 // import { upload } from '@testing-library/user-event/dist/upload';
 
@@ -83,11 +84,15 @@ function SetAcount() {
           <div id="stylerec" />
           <div id="poly1" />
           <div className='midlep'>
-            
-            <h1 className='h1'>WELCOME!</h1>
-            <p className='fp'>
-            Set up your profile. Let’s know a little bit about you. This won’t take long.
+            <div>
+            <IMG imgName={"https://res.cloudinary.com/alexandracaulea/image/upload/v1582179610/user_fckc9f.jpg"} 
+        size={'100px'}/>
+            </div>
+        
+            <p >
+            Set up your profile. Let’s know a little bit about you.
             </p>
+            <p> This won’t take long.</p>
           </div>
         </div>
       </div>

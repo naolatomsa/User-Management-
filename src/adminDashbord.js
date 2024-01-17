@@ -20,6 +20,14 @@ function Naol() {
       <p style={{
       color: 'black'
     }}> ums</p>
+        <select id="role" name="Role">
+            <option value="male" >Admin</option>
+            <option value="female">User</option>
+        </select>
+        <select id="status" name="status">
+            <option value="male" >Active</option>
+            <option value="female">Inactive</option>
+        </select>
       <button>search</button>
     </div>
     <div className="user-top">
