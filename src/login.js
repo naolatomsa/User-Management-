@@ -52,7 +52,6 @@ function Login() {
         console.error('Passwords do not match.');
         return;
       }
-
   
       try {
         const response = await axios.post('http://192.168.0.111:8000/api/signup/', {
