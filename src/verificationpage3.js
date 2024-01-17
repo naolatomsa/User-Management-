@@ -34,6 +34,7 @@ const Verificationpage3= () => {
         </div>
         <button style={{marginTop: '30px'}}>Continue</button>
         <p style={{color:'black'}}>If you didn’t receive a code! <a style={{color:'#38A899'}}>Resend</a></p>
+        {/* <p style={{color:'black'}}>If you didn’t receive a code! <a style={{color:'#38A899'}}>Resend</a></p> */}
       </form>
     </div>
   </div>

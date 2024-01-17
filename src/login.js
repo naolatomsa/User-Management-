@@ -11,6 +11,7 @@ function Login() {
   const [Password, setPassword] = useState("")
   const [Email, setEmail] = useState("")
   const [ConfirmPassword, setConfirmPassword] = useState("")
+  const [error, setError] = useState('');
   const navigate = useNavigate()
   const switchForm = () => {
     setIsSignUp(!isSignUp);
@@ -20,30 +21,9 @@ function Login() {
     
     
   };
-
-  const handleLogin = () => {
-    // Perform your login logic here
-
-    // After successful login, navigate to the home page
-    // history.push('/Naol');
-
-    if(Username && Password){
-      
-      console.log(Username, Password);
-      navigate('/Admin Dashbord')
-
-    }
-    else{
-      navigate('')
-    }
-
-  };
-
-  
-    const handleSignup = async (e) => {
+  const handleSignup = async (e) => {
       e.preventDefault();
   
-      // Input field validation
       if (!Username.trim() || !Password.trim() || !Email.trim() || !ConfirmPassword.trim()) {
         console.error('All fields are required.');
         return;
@@ -60,33 +40,54 @@ function Login() {
   
         console.log('Form data sent successfully!', response.data);
   
-        // Navigate to another page after successful submission
         navigate('/setaccount')
-      } catch (error) {
-        console.error('Failed to send form data', error);
+      } 
+      catch (error) {
+        console.error('empty', error);
+        setError("Empty form")
       }
 
     };
 
-  // const handleSignup = () => {
-    
-  //   if(Username && Password &&Email && ConfirmPassword){
-  //     if(Password===ConfirmPassword)
-  //     {
-  //       navigate('/setaccount')
 
-  //     }
-  //     else{
-  //       alert('your Password doest much')
-  //     }
-      
+    //login
 
-  //   }
-  //   else{
-  //     navigate('')
-  //   }
-    
-  // };
+
+    const handleLogin = async (e) => {
+      e.preventDefault()
+      try {
+        const response = await axios.post('/api/login', {
+          Username,
+          Password,
+        });
+
+        const { sessionId, userRole } = response.data;
+  
+        localStorage.setItem('sessionId', sessionId);
+        localStorage.setItem('userRole', userRole);
+  
+        if (userRole === 'admin') {
+          navigate('/admin');
+        } 
+        else {
+          navigate('/userhome');
+        }
+
+      } catch (error) {
+        console.error('Empty form', error);
+        setError('Empty form');
+      }
+    };
+
+
+  // //Logout
+  //   const handleLogout = () => {
+  //     localStorage.removeItem('sessionId');
+  //     localStorage.removeItem('userRole');
+
+  //     navigate('/');
+  //   };
+
   return (
     <div className='all'>
       <div className='wow'>
@@ -117,10 +118,12 @@ function Login() {
           )
           }
           <div className='input1'>
-            <input type='text' placeholder='Username' required value={Username} onChange={(e)=>{setUserName(e.target.value)}}/>
+            <input type='text' required value={Username} onChange={(e)=>{setUserName(e.target.value)}} placeholder={error ? error : 'Username'}
+        style={{ borderColor: error ? 'red' : '' }}/>
           </div>
           <div className='input2'>
-            <input type='password' placeholder='Password' required value={Password} onChange={(e)=>{setPassword(e.target.value)}}/>
+            <input type='password' required value={Password} onChange={(e)=>{setPassword(e.target.value)}} placeholder={error ? error : 'Password'}
+        style={{ borderColor: error ? 'red' : '' }}/>
           </div>
           {isSignUp && (
             <div className='input4'>

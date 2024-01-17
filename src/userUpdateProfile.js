@@ -113,7 +113,7 @@ const UserUpdateProfile = () => {
         <input type="password" placeholder="confirm password" required/>
         </div>
             <div className='input6'>
-            <button>Add user</button>
+            <button>Update</button>
             </div>
         </form>
 
