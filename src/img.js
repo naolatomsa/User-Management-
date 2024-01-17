@@ -10,5 +10,4 @@ function IMG(props) {
     </>
   );
 }
-
 export default IMG;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import {useNavigate ,Link} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import './login.css';
 
 function Login() {
@@ -8,10 +8,15 @@ function Login() {
   const [isSignUp, setIsSignUp] = useState(false);
   const [Username, setUserName] = useState("")
   const [Password, setPassword] = useState("")
+  const [Email, setEmail] = useState("")
+  const [ConfirmPassword, setConfirmPassword] = useState("")
   const navigate = useNavigate()
   const switchForm = () => {
     setIsSignUp(!isSignUp);
     setAction(isSignUp ? 'Login' : 'Sign Up');
+    setUserName("");
+    setPassword("");
+    
     
   };
 
@@ -28,16 +33,27 @@ function Login() {
 
     }
     else{
-      navigate('/login')
+      navigate('')
     }
 
   };
   const handleSignup = () => {
-    // Perform your login logic here
+    if(Username && Password &&Email && ConfirmPassword){
+      if(Password===ConfirmPassword)
+      {
+        navigate('/setaccount')
 
-    // After successful login, navigate to the home page
-    // history.push('/Naol');
-    navigate('/finish')
+      }
+      else{
+        alert('your Password doest much')
+      }
+      
+
+    }
+    else{
+      navigate('')
+    }
+    
   };
   return (
     <div className='all'>
@@ -62,7 +78,7 @@ function Login() {
           <h1 className='h2'>{action}</h1>
           {isSignUp && (
             <div className='input3'>
-              <input type='email' placeholder='Email' required/>
+              <input type='email' placeholder='Email' required value={Email} onChange={(e)=>{setEmail(e.target.value)}}/>
             </div>
           )
           }
@@ -74,7 +90,7 @@ function Login() {
           </div>
           {isSignUp && (
             <div className='input4'>
-              <input type='password' placeholder='Confirm Password' required/>
+              <input type='password' placeholder='Confirm Password' required value={ConfirmPassword} onChange={(e)=>{setConfirmPassword(e.target.value)}}/>
             </div>
           )}
           

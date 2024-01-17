@@ -98,11 +98,16 @@
     padding: 20px 20px;
     text-transform: uppercase;
   }
-  .input5{
+  .Buttons{
     display: flex;
     padding-left: 15px;
     width: 350px;
     gap: 20px;
+  }
+  .InputClear{
+    background-color: white;
+    border: 1px solid #38A899;
+    color: black;
   }
   .input6{
     padding-left: 200px;

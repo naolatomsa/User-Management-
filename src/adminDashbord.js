@@ -1,6 +1,7 @@
 import React from 'react';
 import TopBar from './Topbar';
 import './adminDashbord.css';
+import IMG from './img';
 
 function Naol() {
 
@@ -56,7 +57,12 @@ function Naol() {
             $350
           </div>
           <div className="col col-6" data-label="Payment Status">
-            Pending
+            naol
+          </div>
+          <div className="col col-6" data-label="Payment Status">
+           {/* <a><IMG imgName={"https://res.cloudinary.com/alexandracaulea/image/upload/v1582179610/user_fckc9f.jpg"} 
+        size={'20px'}/></a><a><IMG imgName={"https://res.cloudinary.com/alexandracaulea/image/upload/v1582179610/user_fckc9f.jpg"} 
+        size={'20px'}/></a> */}
           </div>
         </li>
       </ul>

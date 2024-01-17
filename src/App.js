@@ -12,7 +12,7 @@ import Edit from './edituser';
 
 const router = createBrowserRouter([
   {
-    path: "/login",
+    path: "",
     element: <Login />,
   },
 
