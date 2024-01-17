@@ -68,9 +68,9 @@ function Naol() {
             naol
           </div>
           <div className="col col-6" data-label="Payment Status">
-           {/* <a><IMG imgName={"https://res.cloudinary.com/alexandracaulea/image/upload/v1582179610/user_fckc9f.jpg"} 
-        size={'20px'}/></a><a><IMG imgName={"https://res.cloudinary.com/alexandracaulea/image/upload/v1582179610/user_fckc9f.jpg"} 
-        size={'20px'}/></a> */}
+           <a><IMG imgName={"https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color-round/3/63-512.png"} 
+        size={'20px'}/></a><a><IMG imgName={"https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color-round/3/63-512.png"} 
+        size={'20px'}/></a>
           </div>
         </li>
       </ul>

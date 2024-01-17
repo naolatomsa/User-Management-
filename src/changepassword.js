@@ -1,6 +1,10 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom';
 const Changepassword = () => {
+  const navigate = useNavigate();
+  const handleChangepassword = () => {
+    navigate('/');
+  };
   return (
     <div className='all'>
     <div className='wow'>
@@ -20,7 +24,7 @@ const Changepassword = () => {
       </div>
     </div>
     <div className='form-container'>
-      <form className='form'>
+      <form className='form' onSubmit={handleChangepassword}>
         <h1 style={{color:'#36AE8B'}}>CREATE NEW PASSWORD</h1>
         {/* <div className='input1'>
           <p style={{color:'black'}}>Enter your email for the verification process, we will send 4 digits code to your email.</p>
@@ -31,7 +35,7 @@ const Changepassword = () => {
         <div className='input2'>
           <input type='password' placeholder='confirm password' required />
         </div>
-        <button style={{marginTop: '30px'}}>Continue</button>
+        <button type='submit' style={{marginTop: '30px'}}>Continue</button>
       </form>
     </div>
   </div>

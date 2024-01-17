@@ -1,5 +1,10 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom';
 const ForgetPass = () => {
+  const navigate = useNavigate()
+  const handleReset = () => {
+    navigate('./v1')
+  }
     return (
         <div className='all'>
           <div className='wow'>
@@ -19,7 +24,7 @@ const ForgetPass = () => {
             </div>
           </div>
           <div className='form-container'>
-            <form className='form'>
+            <form className='form'  onSubmit={handleReset}>
               <h1 style={{color:'#36AE8B'}}>FORGOT PASSWORD</h1>
               <div className='input1'>
                 <p style={{color:'black'}}>Enter your email for the verification process, we will send 4 digits code to your email.</p>
@@ -27,7 +32,7 @@ const ForgetPass = () => {
               <div className='input2'>
                 <input type='email' placeholder='Email' required />
               </div>
-              <button style={{marginTop: '30px'}}>Continue</button>
+              <button type='submit' style={{marginTop: '30px'}}>Continue</button>
             </form>
           </div>
         </div>

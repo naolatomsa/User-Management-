@@ -21,6 +21,10 @@ function Login() {
     
     
   };
+
+  const handleForget = () => {
+    navigate('./forget')
+  }
   const handleSignup = async (e) => {
       e.preventDefault();
   
@@ -133,7 +137,8 @@ function Login() {
           
           {isSignUp ? (<button onClick={handleSignup}>{action}</button>):
            (<button type='submit' onClick={handleLogin}>{action}</button>)}
-          <a href='#'>{isSignUp ? '' : 'Forgot your password?'}</a>
+           {isSignUp ? '': (<a onClick={handleForget}>Forgot your password?</a>)}
+          {/* <a href='#'>{isSignUp ? '' : 'Forgot your password?'}</a> */}
           {/* <a onClick={switchForm}> {isSignUp ? 'Login' : 'Sign Up'}</a> */}
           <p style={{ color: 'black' }}>
             {isSignUp ? 'Already have an account?' : 'New user?'}

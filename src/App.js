@@ -70,11 +70,11 @@ const router = createBrowserRouter([
     element: <ForgetPass />,
   },
   {
-    path: "/v1",
+    path: "/forget/v1",
     element: <Verificationpage1 />,
   },
   {
-    path: "/changepassword",
+    path: "/forget/v1/changepassword",
     element: <Changepassword  />,
   },
   {

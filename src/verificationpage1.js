@@ -1,6 +1,10 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom';
 const Verificationpage1 = () => {
+  const navigate = useNavigate();
+  const handleVer1 = () =>{
+    navigate('/forget/v1/changepassword')
+  }
     return (
         <div className='all'>
           <div className='wow'>
@@ -20,7 +24,7 @@ const Verificationpage1 = () => {
             </div>
           </div>
           <div className='form-container'>
-            <form className='form'>
+            <form className='form' onSubmit={handleVer1}>
               <h1 style={{color:'#36AE8B'}}>VERIFICATION</h1>
               <div className='input1'>
                 <p style={{color:'black'}}>Enter your 4 digits code that you received on your email.</p>
@@ -32,7 +36,7 @@ const Verificationpage1 = () => {
                 <input style={{width:'57px' ,marginRight:'5px'}}type='text'required />
               </div>
               <p style={{color:'#F2451C'}}>0:30</p>
-              <button>VERIFY</button>
+              <button type='submit'>VERIFY</button>
               <div className='input1'>
                 <p style={{color:'black'}}>If you didn’t receive a code! <a style={{color:'#38A899'}}>Resend</a></p>
               </div>
