@@ -11,6 +11,10 @@ import AdminAdduser from './AdminAdduser';
 import UserDashboard from './userDashboard';
 import UserUpdateProfile from './userUpdateProfile';
 import ProfileOfAdmin from './profileOfAdmin';
+import ForgetPass from './forgetPass';
+import Verificationpage1 from './verificationpage1';
+import Verificationpage3 from './verificationpage3';
+import Changepassword from './changepassword';
 
 // import './App.css';
 
@@ -61,6 +65,24 @@ const router = createBrowserRouter([
     path: "/adminpro",
     element: <ProfileOfAdmin />,
   },
+  {
+    path: "/forget",
+    element: <ForgetPass />,
+  },
+  {
+    path: "/v1",
+    element: <Verificationpage1 />,
+  },
+  {
+    path: "/changepassword",
+    element: <Changepassword  />,
+  },
+  {
+    path: "/v3",
+    element: <Verificationpage3  />,
+  },
+  
+  
   
   
 ]);

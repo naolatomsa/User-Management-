@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Verificationpage3= () => {
+const Changepassword = () => {
   return (
     <div className='all'>
     <div className='wow'>
@@ -25,19 +25,17 @@ const Verificationpage3= () => {
         {/* <div className='input1'>
           <p style={{color:'black'}}>Enter your email for the verification process, we will send 4 digits code to your email.</p>
         </div> */}
-        <p style={{color:'black'}}>Paste the code we sent to the email you entered to the box below.</p>
-        {/* <div className='input2'>
-          <input type='password' placeholder='password' required />
-        </div> */}
         <div className='input2'>
-          <input type='text' placeholder='paste here' required />
+          <input type='password' placeholder='password' required />
+        </div>
+        <div className='input2'>
+          <input type='password' placeholder='confirm password' required />
         </div>
         <button style={{marginTop: '30px'}}>Continue</button>
-        <p style={{color:'black'}}>If you didn’t receive a code! <a style={{color:'#38A899'}}>Resend</a></p>
       </form>
     </div>
   </div>
   )
 }
 
-export default Verificationpage3;
+export default Changepassword

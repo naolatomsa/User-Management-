@@ -180,7 +180,7 @@
   
   #styleec {
     position: fixed;
-    bottom: 0;
+    margin-top: 400px;
     left: 0;
     width: 150px;
     height: 150px;

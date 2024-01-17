@@ -92,9 +92,11 @@ function Login() {
       <div className='wow'>
           <div className='Naol'>
           <div id="styleec" />
-          <div id="stylerec" />
           <div id="poly1" />
+          
           <div className='midlep'>
+          <div id="stylerec" />
+          
             <h1 className='h1'>WELCOME!</h1>
             <p className='fp'>
               From chaos to clarity. Simplify user management and say goodbye to spreadsheets.
