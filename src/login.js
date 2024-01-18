@@ -38,7 +38,7 @@ function Login() {
       }
   
       try {
-        const response = await axios.post('http://192.168.0.111:8000/api/signup/', {
+        const response = await axios.post('http://192.168.0.252:8000/api/signup/', {
           Username,Email, Password, ConfirmPassword
         });
   
@@ -60,32 +60,26 @@ function Login() {
     const handleLogin = async (e) => {
       e.preventDefault()
       try {
-        const response = await axios.post('http://192.168.0.107:8000/api/login', {
+        const response = await axios.post('http://192.168.0.252:8000/api/login', {
           Username,
           Password,
         });
 
-        // const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
-        // console.log( response.data);
 
         const {access} = response.data
         // const {refresh} = response.data
         const {userRole} = response.data
+        if (userRole==="Admin"){
+          navigate('/adminpro')
+        }
 
-
-
-        navigate('/userpro')
+        else{
+          navigate('/userpro')
+        }
+        
   
         localStorage.setItem('access', access);
         localStorage.setItem('userRole', userRole);
-        // navigate('/Admin Dashbord')
-  
-        // if (userRole === 'admin') {
-        //   navigate('/adminpro');
-        // } 
-        // else {
-        //   navigate('/userpro');
-        // }
 
       } catch (error) {
         console.error('Empty form', error);

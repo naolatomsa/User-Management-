@@ -56,7 +56,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/adduser",
-    element: access && userRole === "Admin" ? <AdminAdduser /> : <Login />,
+    element: access && userRole === "Admin" ? <ProfileOfAdmin /> : <Login />,
   },
   {
     path: "/userpro",
