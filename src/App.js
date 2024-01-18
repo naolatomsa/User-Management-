@@ -18,7 +18,13 @@ import Changepassword from './changepassword';
 
 // import './App.css';
 
+
+const access = localStorage.getItem('access')
+const userRole = localStorage.getItem('userRole')
+console.log(access);
+
 const router = createBrowserRouter([
+
   {
     path: "",
     element: <Login />,
@@ -26,7 +32,7 @@ const router = createBrowserRouter([
 
   {
     path: "/Admin Dashbord",
-    element: <Naol />,
+    element:  access && userRole === "Admin" ? <Naol /> : <Login />,
   },
   {
     path: "/userhome",
@@ -50,20 +56,20 @@ const router = createBrowserRouter([
   },
   {
     path: "/adduser",
-    element: <AdminAdduser />,
+    element: access && userRole === "Admin" ? <AdminAdduser /> : <Login />,
   },
   {
     path: "/userpro",
-    element: <UserDashboard />,
+    element: access && userRole === "normal_users" ? <UserDashboard /> : <Login />,
   },
   {
     path: "/updatepro",
-    element: <UserUpdateProfile />,
+    element: access && userRole === "normal_users" ? <UserUpdateProfile /> : <Login />,
   },
   
   {
     path: "/adminpro",
-    element: <ProfileOfAdmin />,
+    element: access && userRole === "Admin" ? <ProfileOfAdmin /> : <Login />,
   },
   {
     path: "/forget",

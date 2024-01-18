@@ -38,7 +38,7 @@ const ProfileOfAdmin = () => {
   return (
     <>
     <div className='tolbar1'><TopBar /></div>
-    <div class="adminpro">
+    <div className="adminpro">
     <div>
     <Gule location='ethiopia'
             role = 'admin'
