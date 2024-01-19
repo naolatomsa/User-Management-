@@ -38,7 +38,7 @@ function Login() {
       }
   
       try {
-        const response = await axios.post('http://192.168.0.252:8000/api/signup/', {
+        const response = await axios.post('http://127.0.0.1:8000/api/signup/', {
           Username,Email, Password, ConfirmPassword
         });
   
@@ -60,7 +60,7 @@ function Login() {
     const handleLogin = async (e) => {
       e.preventDefault()
       try {
-        const response = await axios.post('http://192.168.0.252:8000/api/login', {
+        const response = await axios.post('http://127.0.0.1:8000/api/login', {
           Username,
           Password,
         });
@@ -88,13 +88,7 @@ function Login() {
     };
 
 
-  // //Logout
-  //   const handleLogout = () => {
-  //     localStorage.removeItem('sessionId');
-  //     localStorage.removeItem('userRole');
 
-  //     navigate('/');
-  //   };
 
   return (
     <div className='all'>

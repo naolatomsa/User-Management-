@@ -36,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/adduser",
-    element:  access && userRole === "Admin" ? <Naol /> : <Login />,
+    element:  access && userRole === "Admin" ? <AdminAdduser /> : <Login />,
   },
   {
     path: "/userhome",

@@ -1,8 +1,26 @@
 import React from "react";
 import './topbar.css';
 import IMG from "./img";
+import { useNavigate } from "react-router-dom";
+// import { useState } from "react";
+function TopBar() {
+  const navigate = useNavigate();
+  const access = localStorage.getItem('access');
+  const userRole = localStorage.getItem('userRole');
+  console.log(access);
 
-function TopBar(){
+  // Logout
+ 
+  const handleLogout = () => {
+    try{
+    localStorage.removeItem('access');
+    localStorage.removeItem('userRole');
+
+    navigate('/');
+    }catch(error){
+      console.log(error)
+    }
+  };
     return(
 
         <>
@@ -14,7 +32,7 @@ function TopBar(){
       <div className="logout">
         
 
-        <button>logout</button>
+        <button onSubmit={handleLogout}>logout</button>
           
       </div>
       
