@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 function TopBar() {
   const navigate = useNavigate();
-  const access = localStorage.getItem('access');
-  const userRole = localStorage.getItem('userRole');
-  console.log(access);
+  // const access = localStorage.getItem('access');
+  // const userRole = localStorage.getItem('userRole');
+  // console.log(access);
 
   // Logout
  
@@ -32,7 +32,7 @@ function TopBar() {
       <div className="logout">
         
 
-        <button onSubmit={handleLogout}>logout</button>
+        <button onClick={handleLogout}>logout</button>
           
       </div>
       

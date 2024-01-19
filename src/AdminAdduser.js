@@ -26,6 +26,7 @@ function AdminAdduser(){
           try {
             const response = await axios.get('https://restcountries.com/v2/all');
             setCountries(response.data);
+
           } catch (error) {
             console.error('Error fetching countries:', error);
           }

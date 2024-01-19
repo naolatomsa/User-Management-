@@ -89,6 +89,7 @@ body {
       margin-bottom: 10px;
       padding-top: 10px;
       padding-bottom: 10px;
+      gap: 20px;
       box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
     }
     .col-1 {
@@ -139,4 +140,27 @@ body {
     }
   }
   
+  table {
+    border-collapse: collapse;
+    width: 900px;
+    margin-left: 250px;
+  }
   
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  th{
+    background-color: #EAEAEA;
+    padding: 10px;
+    border-bottom: 5px solid #E0EFFE;
+    
+  }
+  td{
+    padding: 10px;
+    background-color: #ffffff;
+    /* margin-bottom: 50px; */
+    border-bottom: 5px solid #E0EFFE;
+    
+  }
+  /* tr:nth-child(even) {background-color: #f2f2f2;} */

@@ -1,12 +1,6 @@
-/* body {
-    font-family: 'lato', sans-serif;
-  } */
+/* 
   .container2 {
     width: 500px;
-    /* margin-left: auto;
-    margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px; */
   }
   
   h2 {
@@ -79,4 +73,27 @@
         }
       }
     }
+  } */
+      /* Styles for the table */
+      .responsivetable {
+      width: 50%;
+      row-gap: 20px;
+          border-collapse: collapse;
+        margin-top: 20px;
+      }
+  
+      .tableheader, .tablerow {
+        display: flex;
+        margin-bottom: 5px;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+        height: 30px;
+      }
+  .tableheader{
+    background-color: red;
+    
+  }
+  .tablerow{
+    height: 30px;
+    background-color: white;
   }

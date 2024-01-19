@@ -1,9 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useEffect } from 'react';
 import TopBar from './Topbar';
+import axios from 'axios';
 import './adminDashbord.css';
-import IMG from './img';
+// import IMG from './img';
 
 function Naol() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // Function to fetch data from the backend
+    const fetchData = async () => {
+      try {
+        // Make an HTTP GET request using Axios to your backend API endpoint
+        const response = await axios.get('http://127.0.0.1:8000/api/user_list');
+
+        // Access the data property of the response object
+        const responseData = response.data;
+
+        // Ensure responseData is an array before updating the state
+        if (Array.isArray(responseData)) {
+          setData(responseData);
+        } else {
+          console.error('Fetched data is not an array:', responseData);
+
+          // If responseData is not an array, you may handle this situation accordingly,
+          // for example, by setting an empty array as the default data.
+          setData([]);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+
+        // If an error occurs during the fetch, you may want to handle it accordingly.
+        // For simplicity, we set data to an empty array.
+        setData([]);
+      }
+    };
+
+    // Call the fetchData function when the component mounts
+    fetchData();
+  }, []); // Empty dependency array ensures the effect runs only once on mount
+
+
+  const handleDeactivate = async (userId) => {
+    try {
+      const response = await axios.post(`http://127.0.0.1:8000/api/deactivate_user${userId}`);
+      console.log('User deactivated successfully!', response.data);
+      // Handle success (if needed)
+    } catch (error) {
+      console.error('Error deactivating user:', error);
+      // Handle error (if needed)
+    }
+  };
+const handleDelete = async (userId) => {
+  try {
+    const response = await axios.delete(`http://127.0.0.1:8000/api/delete_user/${userId}`);
+    console.log('User deleted successfully!', response.data);
+    // Handle success (if needed)
+  } catch (error) {
+    console.error('Error deleting user:', error);
+    // Handle error (if needed)
+  }
+};
+
 
   return (
     <>
@@ -38,43 +97,28 @@ function Naol() {
       </p>
       <button>Add User</button>
     </div>
-    <div className="container">
-      <ul className="responsive-table">
-        <li className="table-header">
-          <div className="col col-1">User Name</div>
-          <div className="col col-2">Email Address</div>
-          <div className="col col-3">Status</div>
-          <div className="col col-4">Role</div>
-          <div className="col col-5">Activity</div>
-          <div className="col col-6">action</div>
-        </li>
-        <li className="table-row">
-          <div className="col col-1" data-label="Job Id">
-            42235
-          </div>
-          <div className="col col-2" data-label="Customer Name">
-            John Doe
-          </div>
-          <div className="col col-3" data-label="Amount">
-            $350
-          </div>
-          <div className="col col-4" data-label="Payment Status">
-            Pending
-          </div>
-          <div className="col col-5" data-label="Amount">
-            $350
-          </div>
-          <div className="col col-6" data-label="Payment Status">
-            naol
-          </div>
-          <div className="col col-6" data-label="Payment Status">
-           <a><IMG imgName={"https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color-round/3/63-512.png"} 
-        size={'20px'}/></a><a><IMG imgName={"https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color-round/3/63-512.png"} 
-        size={'20px'}/></a>
-          </div>
-        </li>
-      </ul>
-    </div>
+
+    <table>
+      <thead>
+  <tr>
+  <th>User Name</th>
+  <th>email</th>
+  <th>Role</th>
+  <th>status</th>
+  <th>Action</th>
+  </tr></thead>
+  <tbody>
+  {data.map((item) => (
+  <tr key={item.id}>
+  <td>{item.username}</td>
+  <td>{item.email}</td>
+  <td>$100</td>
+  <td>$100</td>
+  <td><a onClick={() => handleDeactivate(item.id)}>Dec</a>
+  <a onClick={() => handleDelete(item.id)}>Del</a></td>
+  </tr>
+  ))}</tbody>
+</table>
   </div>
     
     </>
