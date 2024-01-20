@@ -2,9 +2,43 @@ import React from 'react';
 import './login.css';
 import './edituser.css';
 import TopBar from './Topbar';
+import { useEffect, useState } from 'react';
+import jwt from 'jsonwebtoken';
 // import View from './Activity';
 import Gule from './userpage';
 function AdminProfile(){
+
+
+        const [userInfo, setUserInfo] = useState(null);
+        
+        // const userRole = localStorage.getItem('userRole')
+      
+        useEffect(() => {
+          // Retrieve the token from storage (localStorage, cookies, etc.)
+          const access = localStorage.getItem('access')
+      
+          if (access) {
+            // Decode the token to get user information
+            const decodedUser = jwt.decode(access);
+      
+            // Set the user information in state
+            setUserInfo(decodedUser);
+          }
+        }, []);
+
+        // return (
+        //     <div>
+        //       {userInfo ? (
+        //         <div>
+        //           <h2>Welcome, {userInfo.username}!</h2>
+        //           <p>Email: {userInfo.email}</p>
+        //           {/* Other user information */}
+        //         </div>
+        //       ) : (
+        //         <p>Loading...</p>
+        //       )}
+        //     </div>
+        //   );
     return(
         <div class="edituser">
         

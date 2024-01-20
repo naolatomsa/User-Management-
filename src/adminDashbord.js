@@ -78,16 +78,26 @@ const handleDelete = async (userId) => {
     <div className="user-role">
       <p style={{
       color: 'black'
-    }}> ums</p>
-        <select id="role" name="Role">
-            <option value="male" >Admin</option>
-            <option value="female">User</option>
-        </select>
-        <select id="status" name="status">
-            <option value="male" >Active</option>
-            <option value="female">Inactive</option>
-        </select>
-      <button>search</button>
+    }}> UMS</p>
+          <div class="selectdiv">
+        <label>
+            <select>
+                <option value="" disabled>Status</option>
+                <option>Active</option>
+                <option>Inactive</option>
+            </select>
+        </label>
+      </div>
+      <div class="selectdiv">
+        <label>
+            <select>
+                <option value="" disabled>Role</option>
+                <option>Admin</option>
+                <option>User</option>
+            </select>
+        </label>
+      </div>
+      <button>Filter</button>
     </div>
     <div className="user-top">
       <p style={{
