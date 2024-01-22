@@ -1,4 +1,5 @@
 import React from 'react'
+import './login.css'
 
 const Verificationpage3= () => {
   return (
@@ -15,7 +16,7 @@ const Verificationpage3= () => {
           </p>
           <p className='sp'>Your time</p>
           <p className='thp'>your data</p>
-          <p className='fitp'>your peace of mind!</p>
+          <p className='fitp' style={{marginBottom:'0'}}>your peace of mind!</p>
         </div>
       </div>
     </div>
@@ -25,15 +26,15 @@ const Verificationpage3= () => {
         {/* <div className='input1'>
           <p style={{color:'black'}}>Enter your email for the verification process, we will send 4 digits code to your email.</p>
         </div> */}
-        <p style={{color:'black'}}>Paste the code we sent to the email you entered to the box below.</p>
+        <p style={{color:'black',fontSize:'17px'}}>Paste the code we sent to the email you entered to the box below.</p>
         {/* <div className='input2'>
           <input type='password' placeholder='password' required />
         </div> */}
         <div className='input2'>
-          <input type='text' placeholder='paste here' required />
+          <input type='text' placeholder='paste here' required/>
         </div>
         <button style={{marginTop: '30px'}}>Continue</button>
-        <p style={{color:'black'}}>If you didn’t receive a code! <a style={{color:'#38A899'}}>Resend</a></p>
+        <p style={{color:'black',fontSize:'17px'}}>If you didn’t receive a code! <a style={{fontSize:'17px'}}>Resend</a></p>
         {/* <p style={{color:'black'}}>If you didn’t receive a code! <a style={{color:'#38A899'}}>Resend</a></p> */}
       </form>
     </div>

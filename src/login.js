@@ -112,7 +112,7 @@ function Login() {
   
             <p className='sp'>Your time</p>
             <p className='thp'>your data</p>
-            <p className='fitp'>your peace of mind!</p>
+            <p className='fitp' style={{marginBottom:'0'}}>your peace of mind!</p>
           </div>
         </div>
       </div>
@@ -124,32 +124,38 @@ function Login() {
           
           {isSignUp && (
             <div className='input3'>
-              <input type='email' placeholder='Email' required value={Email} onChange={(e)=>{setEmail(e.target.value)}}/>
+              <input type='email' placeholder='Email' required value={Email} onChange={(e)=>{setEmail(e.target.value)}}
+              style={{ backgroundImage: `url('${process.env.PUBLIC_URL}/Icons/email.png')`, backgroundSize: '20px 20px', 
+              backgroundRepeat: 'no-repeat',backgroundPosition: 'left 10px center', paddingLeft: '50px' }}/>
             </div>
           )
           }
           <div className='input1'>
             <input type='text' required value={Username} onChange={(e)=>{setUserName(e.target.value)}} placeholder={error ? error : 'Username'}
-        style={{ borderColor: error ? 'red' : '' }}/>
+        style={{ borderColor: error ? 'red' : '' , backgroundImage: `url('${process.env.PUBLIC_URL}/Icons/name.png')`, backgroundSize: '20px 20px', 
+        backgroundRepeat: 'no-repeat',backgroundPosition: 'left 10px center', paddingLeft: '50px' }} />
           </div>
           <div className='input2'>
             <input type='password' required value={Password} onChange={(e)=>{setPassword(e.target.value)}} placeholder={error ? error : 'Password'}
-        style={{ borderColor: error ? 'red' : '' }}/>
+        style={{ borderColor: error ? 'red' : '' , backgroundImage: `url('${process.env.PUBLIC_URL}/Icons/password.png')`, backgroundSize: '20px 20px', 
+        backgroundRepeat: 'no-repeat',backgroundPosition: 'left 10px center', paddingLeft: '50px'}}/>
           </div>
           {isSignUp && (
             <div className='input4'>
-              <input type='password' placeholder='Confirm Password' required value={ConfirmPassword} onChange={(e)=>{setConfirmPassword(e.target.value)}}/>
+              <input type='password' placeholder='Confirm Password' required value={ConfirmPassword} onChange={(e)=>{setConfirmPassword(e.target.value)}}
+                style={{ backgroundImage: `url('${process.env.PUBLIC_URL}/Icons/password.png')`, backgroundSize: '20px 20px', 
+                backgroundRepeat: 'no-repeat',backgroundPosition: 'left 10px center', paddingLeft: '50px' }}/>
             </div>
           )}
           
           {isSignUp ? (<button onClick={handleSignup}>{action}</button>):
            (<button type='submit' onClick={handleLogin}>{action}</button>)}
-           {isSignUp ? '': (<a onClick={handleForget} style={{fontSize:'17px'}}>Forgot your password?</a>)}
+           {isSignUp ? '': (<a onClick={handleForget} style={{fontSize:'17px',color:'#38A899'}}>Forgot your password?</a>)}
           {/* <a href='#'>{isSignUp ? '' : 'Forgot your password?'}</a> */}
           {/* <a onClick={switchForm}> {isSignUp ? 'Login' : 'Sign Up'}</a> */}
           <p style={{ color: 'black',fontSize:'17px'}} >
             {isSignUp ? 'Already have an account?' : 'New user?'}
-            <a onClick={switchForm} style={{fontSize:'17px'}}> {isSignUp ? 'Login' : 'Sign Up'}</a>
+            <a onClick={switchForm} style={{fontSize:'17px', color:'#38A899'}}> {isSignUp ? 'Login' : 'Sign Up'}</a>
           </p>
         </form>
       </div>

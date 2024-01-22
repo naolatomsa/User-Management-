@@ -50,8 +50,9 @@ const ProfileOfAdmin = () => {
     </div>
 
     <div className="form-container adminprofile">
-
-    <form className='form editform' action='#'>
+      
+    <form className='form editform admin-pro' action='#'>
+    <h1 className='htwo'>Edit Profile</h1>
     <div className='input3'>
         <input type='text' placeholder='first name' required/>
         </div>

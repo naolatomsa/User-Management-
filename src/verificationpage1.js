@@ -19,7 +19,7 @@ const Verificationpage1 = () => {
                 </p>
                 <p className='sp'>Your time</p>
                 <p className='thp'>your data</p>
-                <p className='fitp'>your peace of mind!</p>
+                <p className='fitp' style={{marginBottom:'0'}}>your peace of mind!</p>
               </div>
             </div>
           </div>
@@ -27,7 +27,7 @@ const Verificationpage1 = () => {
             <form className='form' onSubmit={handleVer1}>
               <h1 style={{color:'#36AE8B'}}>VERIFICATION</h1>
               <div className='input1'>
-                <p style={{color:'black'}}>Enter your 4 digits code that you received on your email.</p>
+                <p style={{color:'black',fontSize:'17px'}}>Enter your 4 digits code that you received on your email.</p>
               </div>
               <div className='input2'>
                 <input style={{width:'57px' ,marginRight:'5px'}}type='text' required />

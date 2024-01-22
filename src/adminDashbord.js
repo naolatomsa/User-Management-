@@ -73,9 +73,10 @@ function Naol() {
     <TopBar />
     <div className="user-man">
       <p style={{
-      color: 'black'
+      color: 'black' , fontWeight:'bold'
     }}>User Management</p>
-      <input type="text" placeholder="search" />
+      <input type="text" placeholder="search" style={{backgroundImage: `url('${process.env.PUBLIC_URL}/Icons/search.png')`, backgroundSize: '20px 20px', 
+                backgroundRepeat: 'no-repeat',backgroundPosition: 'left 10px center', paddingLeft: '50px'}}/>
     </div>
     <div className="user-role">
       <p style={{
@@ -103,7 +104,7 @@ function Naol() {
     </div>
     <div className="user-top">
       <p style={{
-      color: 'black'
+      color: 'black', fontWeight:'bold'
     }}>
         User <br /> here is a list of all User
       </p>

@@ -28,15 +28,18 @@ img {
     width: 300px;
     height: 550px;
     position: relative;
+    border-bottom: 1px solid #ccc;
   }
   .card1{
     text-align: center;
+    border-bottom: 1px solid #ccc;
   }
   .card2{
-    padding-left: 100px;
+    /* padding-left: 100px; */
+    border-bottom: 1px solid #ccc;
   }
   .card3{
-    padding-left: 100px;
+    /* padding-left: 100px; */
   }
   .card__image {
     /* width: 100px; */

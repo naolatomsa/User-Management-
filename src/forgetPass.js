@@ -19,7 +19,7 @@ const ForgetPass = () => {
                 </p>
                 <p className='sp'>Your time</p>
                 <p className='thp'>your data</p>
-                <p className='fitp'>your peace of mind!</p>
+                <p className='fitp' style={{marginBottom:'0'}}>your peace of mind!</p>
               </div>
             </div>
           </div>
@@ -27,10 +27,11 @@ const ForgetPass = () => {
             <form className='form'  onSubmit={handleReset}>
               <h1 style={{color:'#36AE8B'}}>FORGOT PASSWORD</h1>
               <div className='input1'>
-                <p style={{color:'black'}}>Enter your email for the verification process, we will send 4 digits code to your email.</p>
+                <p style={{color:'black',fontSize:'17px'}}>Enter your email for the verification process, <br></br>we will send 4 digits code to your email.</p>
               </div>
               <div className='input2'>
-                <input type='email' placeholder='Email' required />
+                <input type='email' placeholder='Email' required style={{backgroundImage: `url('${process.env.PUBLIC_URL}/Icons/email.png')`, backgroundSize: '20px 20px', 
+              backgroundRepeat: 'no-repeat',backgroundPosition: 'left 10px center', paddingLeft: '50px'}}/>
               </div>
               <button type='submit' style={{marginTop: '30px'}}>Continue</button>
             </form>

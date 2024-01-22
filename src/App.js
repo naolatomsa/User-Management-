@@ -54,13 +54,13 @@ const router = createBrowserRouter([
     path: "/edituser",
     element: <Edit />,
   },
-  {
-    path: "/adminpage",
-    element: access && userRole === "Admin" ? <AdminProfile /> : <Login />,
-  },
+  // {
+  //   path: "/adminpage",
+  //   element: access && userRole === "Admin" ? <AdminProfile /> : <Login />,
+  // },
   {
     path: "/adduser",
-    element: access && userRole === "Admin" ? <ProfileOfAdmin /> : <Login />,
+    element: access && userRole === "Admin" ? <AdminProfile /> : <Login />,
   },
   {
     path: "/userpro",

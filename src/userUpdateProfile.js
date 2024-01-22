@@ -46,7 +46,7 @@ const UserUpdateProfile = () => {
     <div className="card auserboard">
 
 
-          <div class="wrapper userprofile">
+          <div class="wrapper userprofile" style={{height:'50px'}}>
             <a onClick={handleUserUpdateProfile} class="third after" style={{fontSize:'17px'}}>My profile</a>
             <a className='third after' style={{fontSize:'17px'}}>Update profile</a>
          </div>
