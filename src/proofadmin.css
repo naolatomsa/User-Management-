@@ -1,0 +1,11 @@
+.body{
+    font-family:'Open Sans', sans-serif;
+  }
+.adminpro{
+    display: flex;
+    gap: 30px;
+}
+.adminprofile{
+    margin-top: 60px;
+    height: 500px;
+}
